@@ -1,0 +1,10 @@
+name: agrogeophy-notebooks-environment
+
+dependencies:
+  - python=3
+
+dependencies:
+  - numpy
+  - scipy
+  - matplotlib
+  - ipywidgets>=0.6.0
