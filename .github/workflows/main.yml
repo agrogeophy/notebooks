@@ -45,7 +45,7 @@ jobs:
       - name: Commit to gh-pages
         run: |
           git clone https://github.com/agrogeophy/notebooks.git --branch gh-pages --single-branch gh-pages
-          cp -r docsrc/_build/html/* gh-pages/docs/
+          cp -r docsrc/_build/html/ gh-pages/docs/
           cd gh-pages
           git config --local user.email "action@users.noreply.github.com"
           git config --local user.name "GitHub Action"
