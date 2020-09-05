@@ -15,7 +15,7 @@ jobs:
   # This workflow contains a single job called "build"
   docs:
     # The type of runner that the job will run on
-    runs-on: python3.8-buster
+    runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -26,7 +26,7 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y pandoc wine-stable
       
       - name: Install pip packages
-        run: pip install -r requirements.txt && pip install sphinx numpydoc sphinx_rtd_theme sphinx_nbexamples pandoc
+        run: pip3 install -r requirements.txt && pip3 install sphinx numpydoc sphinx_rtd_theme sphinx_nbexamples pandoc
 
       - name: Build the doc
         run: cd docsrc && ./build-doc.sh
