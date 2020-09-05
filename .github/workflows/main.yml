@@ -22,16 +22,6 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      - name: Checkout gh-pages
-        run: |
-          git config --global user.name 'Github Action'
-          git config --global user.email 'githubAction@users.noreply.github.com'
-          git pull
-          git checkout gh-pages
-          git pull
-          git fetch origin
-          git merge origin/master --allow-unrelated-histories
-
       - name: Install apt packages
         run: |
           sudo apt-get update
@@ -52,8 +42,12 @@ jobs:
       - name: List files
         run: ls
         
-      - name: Commit docs
+      - name: Commit to gh-pages
         run: |
+          git clone https://github.com/agrogeophy/notebooks.git --branch gh-pages --single-branch gh-pages
+          cp -r docsrc/_build/html/* gh-pages/docs/
+          cd gh-pages
+          git config --local user.email "action@users.noreply.github.com"
+          git config --local user.name "GitHub Action"
           git add docs/*
-          git commit -am "Automated docs build"
-          git push
+          git commit -m "Update documentation" -a || true 
