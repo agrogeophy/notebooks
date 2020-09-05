@@ -26,7 +26,10 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y pandoc wine-stable
       
       - name: Install pip packages
-        run: pip install -r requirements.txt && pip install sphinx numpydoc sphinx_rtd_theme sphinx_nbexamples pandoc
+        run: |
+          pip3 install setuptools==49.0.0 wheel
+          pip3 install -r requirements.txt
+          pip3 install sphinx numpydoc sphinx_rtd_theme sphinx_nbexamples pandoc
 
       - name: Build the doc
         run: cd docsrc && ./build-doc.sh
