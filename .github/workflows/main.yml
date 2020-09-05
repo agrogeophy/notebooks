@@ -33,6 +33,9 @@ jobs:
           pip3 install -r requirements.txt
           pip3 install sphinx numpydoc sphinx_rtd_theme sphinx_nbexamples pandoc
 
+      - name: Checkout gh-pages
+        run: git checkout gh-pages && git merge master
+
       - name: Build the doc
         run: |
           cd docsrc
@@ -48,17 +51,4 @@ jobs:
           git config --global user.email 'githubAction@users.noreply.github.com'
           git add docs/*
           git commit -am "Automated docs build"
-          git push origin gh-pages
-          
-  report:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Create report file
-        run: date +%s > report.txt
-      - name: Commit report
-        run: |
-          git config --global user.name 'Github Action'
-          git config --global user.email 'githubAction@users.noreply.github.com'
-          git commit -am "Automated report"
-          git push origin gh-pages
+          git push
