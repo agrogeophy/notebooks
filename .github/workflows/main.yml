@@ -48,8 +48,8 @@ jobs:
           find ./
           cp -r docsrc/_build/html/ gh-pages/docs/
           cd gh-pages
-          git config --local user.email "action@users.noreply.github.com"
-          git config --local user.name "GitHub Action"
+          git config --local user.email "sagitta1618@users.noreply.github.com"
+          git config --local user.name "jkl"
           git add docs/*
           git commit -m "Update documentation" -a || true
           git push
