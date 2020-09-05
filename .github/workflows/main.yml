@@ -36,7 +36,7 @@ jobs:
       - name: Build the doc
         run: |
           cd docsrc
-          python3 -m sphinx -b html . _build
+          python3 -m sphinx -b html . _build/html
           cd ..
         
       - name: List files
