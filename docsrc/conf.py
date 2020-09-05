@@ -56,7 +56,7 @@ example_gallery_config = {
     'dont_preprocess': [],
     'pattern':'.+.ipynb',
     'urls': 'https://github.com/agrogeophy/notebooks/blob/master/notebooks',
-    'binder_url': 'https://mybinder.org/v2/gh/agrogeophy%2Fnotebooks/master?filepath=notebooks',
+    'binder_url': 'https://mybinder.org/v2/gh/agrogeophy/notebooks/master?filepath=notebooks',
 }
 
 
