@@ -32,7 +32,9 @@ jobs:
           pip3 install sphinx numpydoc sphinx_rtd_theme sphinx_nbexamples pandoc
 
       - name: Build the doc
-        run: cd docsrc && ./build-doc.sh
+        run: |
+          cd docsrc
+          python3 -m sphinx -b html . ../docs
         
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
