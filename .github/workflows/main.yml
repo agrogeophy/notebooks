@@ -21,7 +21,16 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      
+
+      - name: Checkout gh-pages
+        run: |
+          git config --global user.name 'Github Action'
+          git config --global user.email 'githubAction@users.noreply.github.com'
+          git pull
+          git checkout gh-pages
+          git fetch origin
+          git merge origin/master
+
       - name: Install apt packages
         run: |
           sudo apt-get update
@@ -44,21 +53,6 @@ jobs:
         
       - name: Commit docs
         run: |
-          git config --global user.name 'Github Action'
-          git config --global user.email 'githubAction@users.noreply.github.com'
           git add docs/*
           git commit -am "Automated docs build"
-          git push origin gh-pages
-          
-  report:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Create report file
-        run: date +%s > report.txt
-      - name: Commit report
-        run: |
-          git config --global user.name 'Github Action'
-          git config --global user.email 'githubAction@users.noreply.github.com'
-          git commit -am "Automated report"
-          git push origin gh-pages
+          git push
