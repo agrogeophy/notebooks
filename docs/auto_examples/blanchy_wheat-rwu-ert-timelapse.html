@@ -1,0 +1,421 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Monitoring of drying under winter wheat by ERT &mdash; Growing 0.1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/example_gallery_styles.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Gallery of examples" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Growing
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting-started.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Gallery of examples</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Monitoring of drying under winter wheat by ERT</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Growing</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Gallery of examples</a> &raquo;</li>
+        
+      <li>Monitoring of drying under winter wheat by ERT</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/auto_examples/blanchy_wheat-rwu-ert-timelapse.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="monitoring-of-drying-under-winter-wheat-by-ert">
+<span id="gallery-auto-examples-blanchy-wheat-rwu-ert-timelapse-ipynb"></span><h1>Monitoring of drying under winter wheat by ERT<a class="headerlink" href="#monitoring-of-drying-under-winter-wheat-by-ert" title="Permalink to this headline">¶</a></h1>
+<p>This notebook shows how time-lapse electrical resistivity tomography
+(ERT) can help to follow the soil drying (mainly attributed to root
+water uptake) during the growth season.</p>
+<p>This dataset was collected on 24 pins array (0.25 m electrode spacing)
+using a dipole-dipole sequence with a Syscal Pro 48 (Iris Instruments,
+Orléans, France). The experiment took place at Worburn (UK), a research
+station managed by Rothamsted Research in 2017 under winter wheat.</p>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">resipy.R2</span> <span class="kn">import</span> <span class="n">R2</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">())</span>
+<span class="n">datadir</span> <span class="o">=</span> <span class="s1">&#39;../data/blanchy/dc-2d-timelapse/data/&#39;</span>
+<span class="nb">print</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">---------------------------------------------------------------------------</span>
+
+<span class="n">ModuleNotFoundError</span>                       <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">)</span>
+
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">2</span><span class="o">-</span><span class="n">fcca4b3127a5</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+      <span class="mi">1</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="o">----&gt;</span> <span class="mi">2</span> <span class="kn">from</span> <span class="nn">resipy.R2</span> <span class="kn">import</span> <span class="n">R2</span>
+      <span class="mi">3</span> <span class="kn">import</span> <span class="nn">os</span>
+      <span class="mi">4</span> <span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">())</span>
+      <span class="mi">5</span> <span class="n">datadir</span> <span class="o">=</span> <span class="s1">&#39;../data/blanchy/dc-2d-timelapse/data/&#39;</span>
+
+
+<span class="n">ModuleNotFoundError</span><span class="p">:</span> <span class="n">No</span> <span class="n">module</span> <span class="n">named</span> <span class="s1">&#39;resipy&#39;</span>
+</pre></div>
+</div>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">k</span> <span class="o">=</span> <span class="n">R2</span><span class="p">()</span> <span class="c1"># initiate an R2 instance</span>
+<span class="n">k</span><span class="o">.</span><span class="n">createTimeLapseSurvey</span><span class="p">([</span><span class="n">datadir</span> <span class="o">+</span> <span class="s1">&#39;17031501.csv&#39;</span><span class="p">,</span>
+                         <span class="n">datadir</span> <span class="o">+</span> <span class="s1">&#39;17040301.csv&#39;</span><span class="p">,</span>
+                         <span class="n">datadir</span> <span class="o">+</span> <span class="s1">&#39;17051601.csv&#39;</span><span class="p">],</span> <span class="n">ftype</span><span class="o">=</span><span class="s1">&#39;Syscal&#39;</span><span class="p">)</span>
+<span class="n">k</span><span class="o">.</span><span class="n">filterUnpaired</span><span class="p">()</span> <span class="c1"># remove dummy quadrupoles added to make dipole-dipole faster</span>
+</pre></div>
+</div>
+<pre class="literal-block">Working directory is: C:UsersgcassAnaconda3envspython36libsite-packagesresipyinvdir
+clearing the dirname
+Inf or NaN: filterData: 0 / 344 quadrupoles removed.
+strange quadrupoles: filterData: 0 / 344 quadrupoles removed.
+36/344 reciprocal measurements NOT found.
+0 measurements error &gt; 20 %
+../data/blanchy/dc-2d-timelapse/data/17031501.csv imported
+--------- ../data/blanchy/dc-2d-timelapse/data/17031501.csv imported
+Inf or NaN: filterData: 0 / 344 quadrupoles removed.
+strange quadrupoles: filterData: 0 / 344 quadrupoles removed.
+36/344 reciprocal measurements NOT found.
+0 measurements error &gt; 20 %
+../data/blanchy/dc-2d-timelapse/data/17040301.csv imported
+--------- ../data/blanchy/dc-2d-timelapse/data/17040301.csv imported
+Inf or NaN: filterData: 0 / 314 quadrupoles removed.
+strange quadrupoles: filterData: 0 / 314 quadrupoles removed.
+48/314 reciprocal measurements NOT found.
+0 measurements error &gt; 20 %
+../data/blanchy/dc-2d-timelapse/data/17051601.csv imported
+--------- ../data/blanchy/dc-2d-timelapse/data/17051601.csv imported
+creating bigSurvey
+Inf or NaN: filterData: 0 / 344 quadrupoles removed.
+strange quadrupoles: filterData: 0 / 344 quadrupoles removed.
+36/344 reciprocal measurements NOT found.
+0 measurements error &gt; 20 %
+3 survey files imported
+removeUnpaired:filterData: 36 / 344 quadrupoles removed.
+removeUnpaired:filterData: 36 / 344 quadrupoles removed.
+removeUnpaired:filterData: 48 / 314 quadrupoles removed.</pre>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">120</span>
+</pre></div>
+</div>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">9</span><span class="p">),</span> <span class="n">sharex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">k</span><span class="o">.</span><span class="n">showPseudo</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mi">80</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;(a) 2017-03-15&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">k</span><span class="o">.</span><span class="n">showPseudo</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mi">80</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;(b) 2017-04-03&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">axs</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">k</span><span class="o">.</span><span class="n">showPseudo</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mi">80</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;(c) 2017-05-16&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Text</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="s1">&#39;(c) 2017-05-16&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="../_images/blanchy_wheat-rwu-ert-timelapse_0.png" src="../_images/blanchy_wheat-rwu-ert-timelapse_0.png" />
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">k</span><span class="o">.</span><span class="n">fitErrorPwl</span><span class="p">(</span><span class="n">index</span><span class="o">=-</span><span class="mi">2</span><span class="p">)</span> <span class="c1"># fit a power-law error model for all dataset aggregated</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Error</span> <span class="n">model</span> <span class="ow">is</span> <span class="n">R_err</span> <span class="o">=</span> <span class="mf">0.00</span> <span class="n">R_avg</span><span class="o">^</span><span class="mf">1.123</span> <span class="p">(</span><span class="n">R</span><span class="o">^</span><span class="mi">2</span> <span class="o">=</span> <span class="mf">0.9851</span><span class="p">)</span>
+</pre></div>
+</div>
+<img alt="../_images/blanchy_wheat-rwu-ert-timelapse_1.png" src="../_images/blanchy_wheat-rwu-ert-timelapse_1.png" />
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">k</span><span class="o">.</span><span class="n">createMesh</span><span class="p">(</span><span class="n">typ</span><span class="o">=</span><span class="s1">&#39;trian&#39;</span><span class="p">,</span> <span class="n">cl</span><span class="o">=</span><span class="mf">0.02</span><span class="p">,</span> <span class="n">cl_factor</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">show_output</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span> <span class="c1"># create a triangular mesh with a characteristic length of 0.5</span>
+<span class="n">k</span><span class="o">.</span><span class="n">showMesh</span><span class="p">()</span> <span class="c1"># display the mesh</span>
+</pre></div>
+</div>
+<pre class="literal-block">computed DOI : -2.17
+Generating gmsh input file...
+
+doi in gmshWrap.py: -2.166667
+dp_len in gmshWrap.py: 5.750000
+adding surface points and electrodes to input file...
+0 polygons added to input file
+0 boundary(ies) added to input file
+writing .geo to file completed, save location:
+C:UsersgcassAnaconda3envspython36libsite-packagesresipyinvdir
+
+parsing gmsh mesh...
+
+importing node coordinates...
+reading connection matrix
+ignoring 0 non-triangle elements in the mesh file, as they are not required for R2
+634 element node orderings had to be corrected because they were found to be orientated clockwise
+
+written mesh.dat file to
+C:UsersgcassAnaconda3envspython36libsite-packagesresipyinvdirmesh.dat
+Mesh plotted in 0.27829 seconds</pre>
+<img alt="../_images/blanchy_wheat-rwu-ert-timelapse_2.png" src="../_images/blanchy_wheat-rwu-ert-timelapse_2.png" />
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">k</span><span class="o">.</span><span class="n">invert</span><span class="p">(</span><span class="n">parallel</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># run the inversion (and write R2.in and protocol.dat automatically)</span>
+</pre></div>
+</div>
+<pre class="literal-block">Writing .in file and protocol.dat ...
+written mesh.dat file to
+C:UsersgcassAnaconda3envspython36libsite-packagesresipyinvdirmesh.dat
+Matching quadrupoles between surveys for difference inversion ...266 in common...done in 0.017051s
+done
+
+------------ INVERTING REFERENCE SURVEY ---------------
+
+written mesh.dat file to
+C:UsersgcassAnaconda3envspython36libsite-packagesresipyinvdirmesh.dat
+
+
+ &gt;&gt; R  2    R e s i s t i v i t y   I n v e r s i o n   v3.3 &lt;&lt;
+
+ &gt;&gt; D a t e : 18 - 03 - 2020
+ &gt;&gt; My beautiful survey
+ &gt;&gt; I n v e r s e   S o l u t i o n   S e l e c t e d &lt;&lt;
+ &gt;&gt; Determining storage needed for finite element conductance matrix
+ &gt;&gt; Generating index array for finite element conductance matrix
+ &gt;&gt; Reading start resistivity from res0.dat
+ &gt;&gt; R e g u l a r i s e d   T y p e &lt;&lt;
+ &gt;&gt;   L i n e a r    F i l t e r    &lt;&lt;
+ &gt;&gt; L o g - D a t a   I n v e r s i o n &lt;&lt;
+ &gt;&gt; N o r m a l   R e g u l a r i s a t i o n &lt;&lt;
+ &gt;&gt; D a t a   w e i g h t s   w i l l   b e  m o d i f i e d &lt;&lt;
+
+
+ Processing dataset   1
+
+
+ Measurements read:   154     Measurements rejected:     0
+   Geometric mean of apparent resistivities:  0.53798E+02
+
+ &gt;&gt; Total Memory required is:          0.423 Gb
+
+   Iteration   1
+     Initial RMS Misfit:        27.13     Number of data ignored:     0
+     Alpha:     16.041   RMS Misfit:        0.91
+     Step length set to   1.00000
+     Final RMS Misfit:        0.91
+
+ Cannot fit quadratic through step lengths
+     Final RMS Misfit:        0.91
+
+ Solution converged - Outputing results to file
+
+ Calculating sensitivity map
+
+
+ Processing dataset   2
+
+
+ End of data:  Terminating
+--------------------- MAIN INVERSION ------------------
+
+________________System-Check__________________
+Processor info: Intel64 Family 6 Model 142 Stepping 9, GenuineIntel
+Number of logical CPUs: 4
+Kernel type: Windows
+Total RAM available: 16384 Mb
+0/2 inversions completed
+1/2 inversions completed
+2/2 inversions completed
+
+----------- END OF INVERSION IN // ----------</pre>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">axs</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span> <span class="n">sharex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">axs</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;(a) 15th March to 3rd April&#39;</span><span class="p">)</span>
+<span class="n">k</span><span class="o">.</span><span class="n">showResults</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">attr</span><span class="o">=</span><span class="s1">&#39;difference(percent)&#39;</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">sens</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">axs</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;(b) 15th March to 16th May&#39;</span><span class="p">)</span>
+<span class="n">k</span><span class="o">.</span><span class="n">showResults</span><span class="p">(</span><span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">attr</span><span class="o">=</span><span class="s1">&#39;difference(percent)&#39;</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">sens</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Mesh</span> <span class="n">plotted</span> <span class="ow">in</span> <span class="mf">0.17653</span> <span class="n">seconds</span>
+<span class="n">Mesh</span> <span class="n">plotted</span> <span class="ow">in</span> <span class="mf">0.21872</span> <span class="n">seconds</span>
+</pre></div>
+</div>
+<img alt="../_images/blanchy_wheat-rwu-ert-timelapse_3.png" src="../_images/blanchy_wheat-rwu-ert-timelapse_3.png" />
+<div class="sphx-glr-download docutils container">
+<p><strong>Download python script:</strong> <a class="reference download internal" download="" href="../_downloads/814d6f91264b0dc395d9a2758aa9962e/blanchy_wheat-rwu-ert-timelapse.py"><code class="xref download docutils literal notranslate"><span class="pre">blanchy_wheat-rwu-ert-timelapse.py</span></code></a></p>
+<p><strong>Download Jupyter notebook:</strong> <a class="reference download internal" download="" href="../_downloads/0363e4de81d7bf14b0568a64e4707aa3/blanchy_wheat-rwu-ert-timelapse.ipynb"><code class="xref download docutils literal notranslate"><span class="pre">blanchy_wheat-rwu-ert-timelapse.ipynb</span></code></a></p>
+<p><strong>View the notebook in the</strong> <a class="reference external" href="https://nbviewer.jupyter.org/github/agrogeophy/notebooks/blob/master/notebooks/blanchy_wheat-rwu-ert-timelapse.ipynb">Jupyter nbviewer</a></p>
+<p><strong>Run this example interactively:</strong> <a class="reference external" href="https://mybinder.org/v2/gh/agrogeophy%2Fnotebooks/master?filepath=notebooks/blanchy_wheat-rwu-ert-timelapse.ipynb"><img alt="binder" src="https://mybinder.org/badge_logo.svg" /></a></p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="Gallery of examples" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright MIT License
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
