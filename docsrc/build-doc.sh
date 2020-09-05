@@ -2,7 +2,7 @@
 # this file needs to be run from inside the docsrc/ directory
 
 # make sure to activate the pyenv environement with the necessary packages before running the notebooks
-source ../../pyenv/bin/activate
+#source ../../pyenv/bin/activate
 
 # go to docsrc/ and run make html
 make html
