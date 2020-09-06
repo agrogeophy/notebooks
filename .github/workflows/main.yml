@@ -29,7 +29,7 @@ jobs:
       # we need first to git pull all changes from master AND to reset the 'gh-pages' branch with master
       # this is a hard reset and we need to force the push as the tip of 'gh-pages' will be more recent
       # than the tip of 'master' because of our last build of the documentation.
-      - name: Fetch master and merge changes
+      - name: Reset gh-pages to master and force push
         run: |
           git pull
           git reset --hard origin/master
@@ -37,17 +37,19 @@ jobs:
           git config --local user.name "GitHub Action"
           git push --force
 
-      - name: Install apt packages
+      - name: Install packages needed to build the doc
         run: |
           sudo apt-get update
-          sudo apt-get install -y pandoc wine-stable python3-sphinx jupyter
-      
-      - name: Install pip packages
-        run: |
+          sudo apt-get install -y pandoc python3-sphinx jupyter
           pip3 install setuptools==49.0.0 wheel
-          pip3 install -r requirements.txt
           pip3 install sphinx numpydoc sphinx_rtd_theme sphinx_nbexamples pandoc
-
+      
+      # apt or pip packages needed to run the notebooks are specified in apt.txt and requirements.txt
+      - name: Install packages needed for the notebooks
+        run: |
+          pip3 install -r requirements.txt
+          cat apt.txt | xargs sudo apt-get install
+          
       # we need to be inside the docsrc folder to build documentation because the path of the
       # gallery of examples in conf.py are set RELATIVE to the docsrc directory. If we were building
       # from the root (so no cd ... command), we would have the 'auto_examples' directory in the root
