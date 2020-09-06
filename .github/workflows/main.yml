@@ -47,8 +47,10 @@ jobs:
 
       - name: Build the doc
         run: |
-          python3 -m sphinx -b html docsrc docs
-        
+          cd docsrc
+          python3 -m sphinx -b html . ../docs
+          cd ..
+          
       - name: Commit to gh-pages
         run: |
           find ./
