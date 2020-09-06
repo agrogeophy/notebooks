@@ -21,6 +21,15 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+        with:
+          ref: gh-pages
+          
+      - name: pull from master
+        run: |
+          git fetch origin
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git push
 
       - name: Install apt packages
         run: |
