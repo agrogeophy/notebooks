@@ -28,10 +28,10 @@ jobs:
           
       - name: Fetch master and merge changes
         run: |
-          git fetch origin
+          git pull
+          git reset --hard origin/master
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git reset --hard master
           git push
 
       - name: Install apt packages
