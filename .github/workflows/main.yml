@@ -44,18 +44,20 @@ jobs:
         
       - name: Commit to gh-pages
         run: |
+          cd ..
           git clone https://github.com/agrogeophy/notebooks.git --branch gh-pages --single-branch gh-pages
           find ./
-          cp -r docsrc/_build/html/ gh-pages/docs/
+          cp -r notebooks/docsrc/_build/html/ gh-pages/docs/
           cd gh-pages
           git config --local user.email "sagitta1618@users.noreply.github.com"
           git config --local user.name "jkl"
-          git pull
           git add docs/*
           git commit -m "Update documentation" -a || true
+          git pull
           
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN}}
           branch: gh-pages 
+          force: True 
