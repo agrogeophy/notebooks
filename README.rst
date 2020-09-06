@@ -2,7 +2,7 @@
  :target: https://mybinder.org/v2/gh/agrogeophy/notebooks/master?filepath=notebooks
  
 .. image:: https://img.shields.io/badge/Slack-agrogeophy-1.svg?logo=slack
-    :target: https://agrogeophy.slack.com/
+ :target: https://agrogeophy.slack.com/
     
 agrogeophy-notebooks
 ====================
