@@ -26,6 +26,9 @@ jobs:
         with:
           ref: gh-pages
           
+      # we need first to git pull all changes from master AND to reset the 'gh-pages' branch with master
+      # this is a hard reset and we need to force the push as the tip of 'gh-pages' will be more recent
+      # than the tip of 'master' because of our last build of the documentation.
       - name: Fetch master and merge changes
         run: |
           git pull
@@ -45,12 +48,17 @@ jobs:
           pip3 install -r requirements.txt
           pip3 install sphinx numpydoc sphinx_rtd_theme sphinx_nbexamples pandoc
 
+      # we need to be inside the docsrc folder to build documentation because the path of the
+      # gallery of examples in conf.py are set RELATIVE to the docsrc directory. If we were building
+      # from the root (so no cd ... command), we would have the 'auto_examples' directory in the root
+      # rather than in docsrc
       - name: Build the doc
         run: |
           cd docsrc
           python3 -m sphinx -b html . ../docs
           cd ..
-          
+      
+      # we set || true, in case, nothing really changes
       - name: Commit to gh-pages
         run: |
           find ./
