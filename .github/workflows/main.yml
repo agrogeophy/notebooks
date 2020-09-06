@@ -54,6 +54,7 @@ jobs:
           git commit -m "Update documentation" -a || true
           
       - name: Push changes
-        uses: ad-m/github-push-action@gh-pages
+        uses: ad-m/github-push-action@master
         with:
-          github_token: ${{ secrets.BUILD_DOC }}
+          github_token: ${{ secrets.GITHUB_TOKEN}}
+          branch: gh-pages 
