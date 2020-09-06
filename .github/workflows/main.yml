@@ -1,4 +1,6 @@
-# This is a basic workflow to help you get started with Actions
+# on a new push or pull request to master, this workflow runs
+# it first checkout the change on master and add them to the gh-pages branch
+# it then build the documentation using sphinx and push it to the docs/ folder on gh-pages branch
 
 name: CI
 
@@ -21,6 +23,16 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+        with:
+          ref: gh-pages
+          
+      - name: Fetch master and merge changes
+        run: |
+          git pull
+          git reset --hard origin/master
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git push --force
 
       - name: Install apt packages
         run: |
@@ -36,26 +48,12 @@ jobs:
       - name: Build the doc
         run: |
           cd docsrc
-          python3 -m sphinx -b html . _build/html
+          python3 -m sphinx -b html . ../docs
           cd ..
-        
-      - name: List files
-        run: ls
-        
+          
       - name: Commit to gh-pages
         run: |
-          git clone https://github.com/agrogeophy/notebooks.git --branch gh-pages --single-branch gh-pages
           find ./
-          cp -r docsrc/_build/html/ gh-pages/docs/
-          cd gh-pages
-          git config --local user.email "sagitta1618@users.noreply.github.com"
-          git config --local user.name "jkl"
-          git pull
           git add docs/*
           git commit -m "Update documentation" -a || true
-          
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN}}
-          branch: gh-pages 
+          git push
