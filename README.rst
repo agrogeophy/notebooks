@@ -10,7 +10,7 @@ A collection of jupyter notebooks that use agrogeophysical models. To view the n
 
 About
 -----
-**Agrogeophy-notebooks is part of the agrogeophysical catalog website:** `<http://geo.geoscienze.unipd.it/growingwebsite/map_catalog>`__ 
+Agrogeophy-notebooks is part of the `agrogeophysical catalog website <http://geo.geoscienze.unipd.it/growingwebsite/map_catalog>`__ 
 
 We welcome any feedback and ideas!
 Let us know by submitting 
