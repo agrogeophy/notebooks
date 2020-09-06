@@ -50,6 +50,7 @@ jobs:
           cd gh-pages
           git config --local user.email "sagitta1618@users.noreply.github.com"
           git config --local user.name "jkl"
+          git pull
           git add docs/*
           git commit -m "Update documentation" -a || true
           
