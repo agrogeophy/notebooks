@@ -6,11 +6,7 @@
     
 agrogeophy-notebooks
 ====================
-a collection of jupyter notebooks that use agrogeophysical models
-
-Contributors:
-
-- Guillaume Blanchy, University of Lancaster
+A collection of jupyter notebooks that use agrogeophysical models. To view the notebooks, checkout **https://agrogeophy.github.io/notebooks/auto_examples/index.html**
 
 About
 -----
@@ -22,4 +18,18 @@ Let us know by submitting
 or send us a message on our
 `Slack chatroom <https://agrogeophy.slack.com/>`__.
 
+
+How to contribute
+-----------------
+Submit a new notebook via the official website or create a pull request on this repository.
+- the new notebook (.ipynb) should be added to the 'notebooks' folder
+- the data for the notebook (if any) should be added to the 'data' folder
+- if the notebook requires specific packages, add them by editing 'requirements.txt' and 'apt.txt'
+
+The notebooks will be automatically build when the pull request is merged with the master branch. The Action (main.yml) will use 'sphinx-build' to build a gallery of examples and automatically publish the results on the Github Pages.
+
+
+Contributors
+------------
+- Guillaume Blanchy, University of Lancaster
 

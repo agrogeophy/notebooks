@@ -4,8 +4,8 @@
    contain the root `toctree` directive.
 
     
-ResIPy Python API and standalone GUI
-====================================
+Growing notebooks
+=================
 
 
 .. toctree::
