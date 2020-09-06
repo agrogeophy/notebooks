@@ -52,8 +52,8 @@ jobs:
           git config --local user.name "jkl"
           git add docs/*
           git commit -m "Update documentation" -a || true
-      
+          
       - name: Push changes
-        uses: ad-m/github-push-action@master
+        uses: ad-m/github-push-action@gh-pages
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.BUILD_DOC }}
