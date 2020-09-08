@@ -3,7 +3,10 @@
  
 .. image:: https://img.shields.io/badge/Slack-agrogeophy-1.svg?logo=slack
  :target: https://agrogeophy.slack.com/
-    
+
+.. image:: https://zenodo.org/badge/248249530.svg
+   :target: https://zenodo.org/badge/latestdoi/248249530
+   
 agrogeophy-notebooks
 ====================
 A collection of jupyter notebooks that use agrogeophysical models. To view the notebooks, checkout **https://agrogeophy.github.io/notebooks/auto_examples/index.html**
