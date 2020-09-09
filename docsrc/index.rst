@@ -14,6 +14,7 @@ Growing notebooks
    
    getting-started
    auto_examples/index
+   glossary
    
 
 
