@@ -19,7 +19,7 @@ import sys
 
 # -- Project information -----------------------------------------------------
 
-project = 'Growing'
+project = 'Agrogeophy-notebooks'
 copyright = 'MIT License'
 author = 'Agrogeophy community'
 
