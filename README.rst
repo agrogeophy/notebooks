@@ -17,7 +17,7 @@ Agrogeophy-notebooks is part of the `agrogeophysical catalog website <http://geo
 
 We welcome any feedback and ideas!
 Let us know by submitting 
-`issues on Github <https://github.com/BenjMy/agrogeophy-notebooks/issues>`__
+`issues on Github <https://github.com/agrogeophy/notebooks/issues>`__
 or send us a message on our
 `Slack chatroom <https://agrogeophy.slack.com/>`__.
 
