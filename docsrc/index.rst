@@ -4,8 +4,8 @@
    contain the root `toctree` directive.
 
     
-Growing notebooks
-=================
+Notebooks
+=========
 
 
 .. toctree::
