@@ -10,8 +10,7 @@ Getting Started
 .. image:: https://zenodo.org/badge/248249530.svg
    :target: https://zenodo.org/badge/latestdoi/248249530
    
-agrogeophy-notebooks
-====================
+
 A collection of jupyter notebooks that use agrogeophysical models. To view the notebooks, checkout the Gallery of examples.
 
 About
