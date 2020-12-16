@@ -42,9 +42,21 @@ Citing
 ------
 If you use agrogeophy-notebooks for you work, please cite this paper as:
 
-TODO
+.. image:: https://zenodo.org/badge/292793548.svg
+   :target: https://zenodo.org/badge/latestdoi/292793548
 
 BibTex code::
 
-   TODO
+@software{benjamin_mary_2020_4164938,
+  author       = {Benjamin Mary and
+                  Guillaume Blanchy},
+  title        = {{A collection of jupyter notebooks that use 
+                   agrogeophysical models}},
+  month        = oct,
+  year         = 2020,
+  publisher    = {Zenodo},
+  version      = {v0.1},
+  doi          = {10.5281/zenodo.4164938},
+  url          = {https://doi.org/10.5281/zenodo.4164938}
+}
 
