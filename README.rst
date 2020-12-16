@@ -3,9 +3,9 @@
  
 .. image:: https://img.shields.io/badge/Slack-agrogeophy-1.svg?logo=slack
  :target: https://agrogeophy.slack.com/
-
-.. image:: https://zenodo.org/badge/248249530.svg
-   :target: https://zenodo.org/badge/latestdoi/248249530
+ 
+.. image:: https://zenodo.org/badge/292793548.svg
+   :target: https://zenodo.org/badge/latestdoi/292793548
    
 agrogeophy-notebooks
 ====================
