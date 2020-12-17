@@ -13,6 +13,7 @@ mkdir ../docs
 touch ../docs/.nojekyll # create empty file
 
 cp -r _build/html/* ../docs/
+cp -r ../notebooks/img/* ../docs/img # copy images of notebooks
 
 # then push the output of docs/* to the remote branch
 
