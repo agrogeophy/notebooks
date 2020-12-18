@@ -15,6 +15,7 @@ Notebooks
    getting-started
    auto_examples/index
    glossary
+   contributors
    
 
 
