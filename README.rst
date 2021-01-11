@@ -24,7 +24,7 @@ or send us a message on our
 
 How to contribute
 -----------------
-Submit a new notebook via the official website or create a pull request on this repository.
+Submit a new notebook, create a pull request on this repository.
 - the new notebook (.ipynb) should be added to the 'notebooks' folder
 - the data for the notebook (if any) should be added to the 'data' folder
 - if the notebook requires specific packages, add them by editing 'requirements.txt' and 'apt.txt'
