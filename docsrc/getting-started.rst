@@ -10,17 +10,24 @@ Getting Started
 .. image:: https://zenodo.org/badge/292793548.svg
    :target: https://zenodo.org/badge/latestdoi/292793548
 
-A collection of jupyter notebooks that use agrogeophysical models. To view the notebooks, checkout the Gallery of examples.
+Agrogeophy-notebooks is a curated repository of interactive agrogeophysical notebooks, seamlessly integrating data, text, code and figures. Notebooks can be freely modified and re-executed through the web, offering a fully reproducible, “libre” path from data to figures. Agrogeophy-notebooks is powered by the Binder project.To view the notebooks, checkout the Gallery of examples.
 
 About
 -----
 Agrogeophy-notebooks is part of the `agrogeophysical catalog website <http://geo.geoscienze.unipd.it/growingwebsite/map_catalog>`__ 
 
-We welcome any feedback and ideas!
-Let us know by submitting 
-`issues on Github <https://github.com/agrogeophy/notebooks/issues>`__
-or send us a message on our
-`Slack chatroom <https://agrogeophy.slack.com/>`__.
+
+What can be published on Agrogeophy-notebooks?
+----------------------------------------------
+Agrogeophy-notebooks currently welcomes submissions along two tracks:
+
+- Tutorial notebooks related to a workshop/conference in the agroeophysic field.
+- Companion notebooks for articles in the agroeophysic field.
+These notebooks are expected to use less than 100 GB disk space, and run in less of an hour, although exceptions may be granted on a case by case basis.
+
+How are Agrogeophy-notebooks submissions reviewed?
+--------------------------------------------------
+The CAGS team checks that the notebooks fit one of the two tracks above, run correctly, and that the text and code are readable.
 
 
 How to contribute
@@ -60,3 +67,11 @@ BibTex code::
 	  url          = {https://doi.org/10.5281/zenodo.4164938}
 	}
 
+
+Get involved 
+------------
+We welcome any feedback and ideas!
+Let us know by submitting 
+`issues on Github <https://github.com/agrogeophy/notebooks/issues>`__
+or send us a message on our
+`Slack chatroom <https://agrogeophy.slack.com/>`__.
