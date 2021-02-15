@@ -37,7 +37,8 @@ Submit a new notebook via the official website and create a pull request on this
 #. the new notebook (.ipynb) should be added to the 'notebooks' folder
 #. the data for the notebook (if any) should be added to the 'data' folder
 #. if the notebook requires specific packages, add them by editing 'requirements.txt' and 'apt.txt'
-#. add metadata descriptors for your notebook by filling the online form `Slack chatroom <https://agrogeophy.github.io/catalog/input_form.html>`__.
+#. add metadata descriptors for your notebook by filling the `online form <https://agrogeophy.github.io/catalog/input_form.html>`__.
+
 The notebooks will be automatically build when the pull request is merged with the master branch. The Action (main.yml) will use 'sphinx-build' to build a gallery of examples and automatically publish the results on the Github Pages.
 
 
