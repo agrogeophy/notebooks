@@ -17,16 +17,16 @@ About
 Agrogeophy-notebooks is part of the `agrogeophysical catalog website <http://geo.geoscienze.unipd.it/growingwebsite/map_catalog>`__ 
 
 
-What can be published on Agrogeophy-notebooks?
-----------------------------------------------
+What can be published on CAGS-notebooks?
+----------------------------------------
 Agrogeophy-notebooks currently welcomes submissions along two tracks:
 
 - Tutorial notebooks related to a workshop/conference in the agroeophysic field.
 - Companion notebooks for articles in the agroeophysic field.
 These notebooks are expected to use less than 100 GB disk space, and run in less of an hour, although exceptions may be granted on a case by case basis.
 
-How are Agrogeophy-notebooks submissions reviewed?
---------------------------------------------------
+How are CAGS-notebooks submissions reviewed?
+--------------------------------------------
 The CAGS team checks that the notebooks fit one of the two tracks above, run correctly, and that the text and code are readable.
 
 
