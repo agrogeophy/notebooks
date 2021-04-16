@@ -25,12 +25,23 @@ or send us a message on our
 How to contribute
 -----------------
 Submit a new notebook, create a pull request on this repository.
+
 - the new notebook (.ipynb) should be added to the 'notebooks' folder
 - the data for the notebook (if any) should be added to the 'data' folder
 - if the notebook requires specific packages, add them by editing 'requirements.txt' and 'apt.txt'
 
 The notebooks will be automatically build when the pull request is merged with the master branch. The Action (main.yml) will use 'sphinx-build' to build a gallery of examples and automatically publish the results on the Github Pages.
 
+Notebook structure
+------------------
+We have developed a common framework in which each survey history is presented: 
+
+- Contributors
+   - author name 
+   - reviewer name
+- Context
+- Materials and Methods
+- Results
 
 Contributors
 ------------
