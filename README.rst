@@ -2,8 +2,8 @@
  :target: https://mybinder.org/v2/gh/agrogeophy/notebooks/master?filepath=notebooks
  
 .. image:: https://img.shields.io/badge/Slack-agrogeophy-1.svg?logo=slack
- :target: https://agrogeophy.slack.com/
- 
+ :target: https://agrogeophy.slack.com/ 
+
 .. image:: https://zenodo.org/badge/292793548.svg
    :target: https://zenodo.org/badge/latestdoi/292793548
    
@@ -20,6 +20,18 @@ Let us know by submitting
 `issues on Github <https://github.com/agrogeophy/notebooks/issues>`__
 or send us a message on our
 `Slack chatroom <https://agrogeophy.slack.com/>`__.
+
+
+
+How to run the notebooks:
+-------------------------
+
+The notebooks can be run online through Binder, or downloaded and run locally.
+
+1. Launch the binder
+2. Select the notebook of interest from the contents
+3. Run the Jupyter notebook
+
 
 
 How to contribute
