@@ -23,8 +23,8 @@ or send us a message on our
 
 
 
-How to run the notebooks:
--------------------------
+How to run the notebooks
+------------------------
 
 The notebooks can be run online through Binder, or downloaded and run locally.
 
