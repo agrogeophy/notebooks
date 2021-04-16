@@ -31,6 +31,16 @@ Submit a new notebook, create a pull request on this repository.
 
 The notebooks will be automatically build when the pull request is merged with the master branch. The Action (main.yml) will use 'sphinx-build' to build a gallery of examples and automatically publish the results on the Github Pages.
 
+Notebook structure
+------------------
+We have developed a common framework in which each survey history is presented: 
+
+- Contributors
+   - author name 
+   - reviewer name
+- Context
+- Materials and Methods
+- Results
 
 Contributors
 ------------
