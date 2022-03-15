@@ -1,0 +1,49 @@
+.. _gallery_auto_examples:
+
+Gallery of examples
+===================
+
+Below is a gallery of examples
+
+
+
+.. toctree::
+
+    mary_run_nail
+    blanchy_wheat-rwu-ert-timelapse
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbContainer" tooltip="">
+
+.. only:: html
+
+    .. figure:: //home/runner/.local/lib/python3.8/site-packages/sphinx_nbexamples/_static/no_image.png
+
+        :ref:`gallery_auto_examples_mary_run_nail.ipynb`
+
+.. raw:: html
+
+    </div>
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbContainer" tooltip="(updated on 2020-12-03)">
+
+.. only:: html
+
+    .. figure:: /auto_examples/images/thumb/gallery_auto_examples_blanchy_wheat-rwu-ert-timelapse.ipynb_thumb.png
+
+        :ref:`gallery_auto_examples_blanchy_wheat-rwu-ert-timelapse.ipynb`
+
+.. raw:: html
+
+    </div>
+
+
+.. raw:: html
+
+    <div style='clear:both'></div>
+
